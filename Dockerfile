@@ -12,7 +12,8 @@
 # See the License for the specific language governing permissions and 
 # limitations under the License.
 
-FROM ubuntu:18.04
+# Ubuntu:18.04 on 19 April 2019
+FROM ubuntu@sha256:017eef0b616011647b269b5c65826e2e2ebddbe5d1f8c1e56b3599fb14fabec8
 
 # create a non-privileged user for installing tools
 RUN groupadd -g 7001 tool && \
@@ -32,7 +33,7 @@ RUN apt-get update && apt-get install -y \
     git=1:2.17.1-1ubuntu0.4 \
     gosu=1.10-1 \
     make=4.1-9.1ubuntu1 \
-    wget=1.19.4-1ubuntu2.1 \
+    wget=1.19.4-1ubuntu2.2 \
     && rm -rf /var/lib/apt/lists/*
 
 # tools are installed here

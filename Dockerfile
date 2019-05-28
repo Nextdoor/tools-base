@@ -33,8 +33,7 @@ RUN apt-get update && apt-get install -y \
     git=1:2.17.1-1ubuntu0.4 \
     gosu=1.10-1 \
     make=4.1-9.1ubuntu1 \
-    wget=1.19.4-1ubuntu2.2 \
-    && rm -rf /var/lib/apt/lists/*
+    wget=1.19.4-1ubuntu2.2
 
 # tools are installed here
 RUN mkdir -p /tool/bin /tool/lib /tool/etc && chown -R tool:tool /tool

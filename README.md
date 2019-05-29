@@ -26,10 +26,10 @@ of its home directory, or they will be orphaned after the ownership change.
 
 Shell with current directory as working directory:
 
-```docker run -v `pwd`:/work -it nextdoor/tools-base:latest /bin/bash```
+```docker run -v `pwd`:/work/target -it nextdoor/tools-base:latest /bin/bash```
 
 Shell as `tool` user (skips ownership update for `user`):
 
-```docker run --user tool -v `pwd`:/work -it nextdoor/tools-base:latest /bin/bash```
+```docker run --user tool -v `pwd`:/work/target -it nextdoor/tools-base:latest /bin/bash```
 
 Use the `--user` option with `exec` on a running container to get additional shells, including as root, if necessary.
